@@ -11,6 +11,8 @@ A web chat application built using Laravel 11, Reverb, Broadcasting, Pest, React
 - [Running Tests](#running-tests)
 - [Usage](#usage)
 - [License](#license)
+- [Repository](#repository)
+- [Video](#video)
 
 ## Prerequisites
 
@@ -29,8 +31,8 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
-    cd your-repository
+    git clone https://github.com/Hemantkumawat/chat-web-app/tree/main
+    cd chat-web-app
     ```
 
 2. **Install PHP dependencies:**
@@ -73,11 +75,11 @@ Ensure you have the following installed:
     - Set the broadcasting configuration:
 
       ```env
-      BROADCAST_DRIVER=pusher
-      PUSHER_APP_ID=your_pusher_app_id
-      PUSHER_APP_KEY=your_pusher_app_key
-      PUSHER_APP_SECRET=your_pusher_app_secret
-      PUSHER_APP_CLUSTER=your_pusher_app_cluster
+      BROADCAST_DRIVER=verb
+      VERB_APP_ID=your_verb_app_id
+      VERB_APP_KEY=your_verb_app_key
+      VERB_APP_SECRET=your_verb_app_secret
+      VERB_APP_CLUSTER=your_verb_app_cluster
       ```
 
 7. **Run the migrations to set up the database schema:**
@@ -108,7 +110,13 @@ Ensure you have the following installed:
 
 ## Running the Application
 
-1. **Start the Laravel development server:**
+1. **Build the assets:**
+
+    ```bash
+    npm run build
+    ```
+
+2. **Start the Laravel development server:**
 
     ```bash
     php artisan serve
@@ -116,13 +124,31 @@ Ensure you have the following installed:
 
    By default, this will start the server at `http://127.0.0.1:8000`.
 
-2. **Start the Vite development server:**
+3. **Start the Vite development server:**
 
     ```bash
     npm run dev
     ```
 
    This will start the Vite development server and enable hot module replacement.
+
+4. **Start the Reverb server:**
+
+    ```bash
+    php artisan reverb:serve
+    ```
+
+5. **Start the queue listener:**
+
+    ```bash
+    php artisan queue:listen
+    ```
+
+6. **Start the Reverb server:**
+
+    ```bash
+    php artisan reverb:start
+    ```
 
 ## Running Tests
 
@@ -147,3 +173,10 @@ Ensure you have the following installed:
 
 This project is Open source \- Whoever wants to use or contribute in it are most welcome.
 
+## Repository
+
+For more details, visit the [GitHub repository](https://github.com/Hemantkumawat/chat-web-app/tree/main).
+
+## Video
+
+For a video demonstration, visit the [Video Link](https://drive.google.com/file/d/1X7u6FUzc6Ul31apISsb1E45Z6wSUedQ1/view?usp=sharing).
