@@ -12,6 +12,7 @@ A web chat application built using Laravel 11, Reverb, Broadcasting, Pest, React
 - [Usage](#usage)
 - [License](#license)
 - [Repository](#repository)
+- [Screenshots](#screenshots)
 - [Video](#video)
 
 ## Prerequisites
@@ -176,6 +177,13 @@ This project is Open source \- Whoever wants to use or contribute in it are most
 ## Repository
 
 For more details, visit the [GitHub repository](https://github.com/Hemantkumawat/chat-web-app/tree/main).
+
+## Screenshots
+
+Here are some screenshots of the ChatBox App:
+
+![Screenshot 1](public/images/ss1.png)
+![Screenshot 2](public/images/ss2.png)
 
 ## Video
 
