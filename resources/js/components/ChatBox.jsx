@@ -37,7 +37,8 @@ const ChatBox = ({rootUrl}) => {
     };
 
     useEffect(() => {
-        getMessages().then(r => {});
+        getMessages().then(r => {
+        });
         connectWebSocket();
 
         return () => {
@@ -47,19 +48,19 @@ const ChatBox = ({rootUrl}) => {
 
     return (
         <div className="flex justify-center">
-            <div className="w-full max-w-2xl">
-                <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                    <div className="bg-gray-800 text-white px-4 py-2">
+            <div className="w-full max-w-2xl rounded-lg border-gray-300 dark:border-gray-100">
+                <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+                    <div className="bg-gray-800 dark:bg-gray-900 text-white px-4 py-2">
                         Chat Box
                     </div>
                     <div className="p-4 h-96 overflow-y-auto">
                         {messages?.map((message) => (
-                            <Message key={message.id} userId={user.id} message={message} />
+                            <Message key={message.id} userId={user.id} message={message}/>
                         ))}
                         <span ref={scroll}></span>
                     </div>
-                    <div className="bg-gray-100 p-4">
-                        <MessageInput rootUrl={rootUrl} />
+                    <div className="bg-gray-100 dark:bg-gray-700 p-4">
+                        <MessageInput rootUrl={rootUrl}/>
                     </div>
                 </div>
             </div>

@@ -40,20 +40,22 @@ const MessageInput = ({rootUrl}) => {
     }
 
     return (
-        <div className="flex items-center space-x-2 ">
+        <div className="flex items-center space-x-2">
             <input
                 onChange={(e) => handleInputChange(e)}
                 autoComplete="off"
                 type="text"
-                className="flex-1 p-2 border border-gray-300 rounded"
+                className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 placeholder="Message..."
                 value={message}
-                onKeyDown={(e) => handleKeyDown(e)}/>
+                onKeyDown={(e) => handleKeyDown(e)}
+            />
             <button
                 onClick={(e) => sendMessage(e)}
-                className={`px-4 py-2 ${isButtonDisabled ? 'bg-blue-300' : 'bg-blue-500'} text-white rounded-lg cursor-pointer hover:bg-blue-700`}
+                className={`px-4 py-2 ${isButtonDisabled ? 'bg-blue-300 dark:bg-blue-500' : 'bg-blue-500 dark:bg-blue-700'} text-white rounded-lg cursor-pointer hover:bg-blue-700 dark:hover:bg-blue-800`}
                 disabled={isButtonDisabled}
-                type="button">
+                type="button"
+            >
                 Send
             </button>
         </div>
